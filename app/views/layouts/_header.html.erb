@@ -14,6 +14,7 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
         <% if user_signed_in? %>
@@ -22,6 +23,16 @@
         <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
         <% end %> 
+=======
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "About", about_path %></li> 
+      <% if user_signed_in? %>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+        <% else %>
+          <li><%= link_to "Sign In", new_user_session_path %></
+      <%end%>
+>>>>>>> 2857fa78f3be953bfc4bfedc09f327fb95041a04
     </ul>
   </div><!-- /.navbar-collapse -->
  </div><!-- /.container -->
